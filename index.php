@@ -62,6 +62,14 @@ $hotels = [
     ?> -->
     <div class="container">
         <h1 class="text-center my-5">Hotels</h1>
+        <form action="index.php" method="_GET" name="formFilter" class="mb-5">
+            <select name="parking" id="parking">
+                <option value="">Choose</option>
+                <option value="parking">Car Parking</option>
+                <option value="without_parking">Without Parking</option>
+            </select>
+            <button type="submit" class="btn btn-outline-dark ms-2">Filter</button>
+        </form>
         <table class="table table-dark table-hover">
             <thead>
                 <tr>
