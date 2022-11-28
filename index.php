@@ -43,6 +43,10 @@ if (isset($_GET['parking']) && !empty($_GET['parking'])) {
     $hotels = array_filter($hotels, fn($value) => $value['parking'] == filter_var($_GET['parking'], FILTER_VALIDATE_BOOLEAN));
     // var_dump($hotels);
 }
+;
+if (isset($_GET['vote']) && !empty($_GET['vote'])) {
+    $hotels = array_filter($hotels, fn($value) => $value['vote'] == $_GET['vote']);
+}
 
 ?>
 
