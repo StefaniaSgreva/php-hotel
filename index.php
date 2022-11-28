@@ -77,26 +77,22 @@ $hotels = [
                 <?php
 
                 foreach ($hotels as $hotel) { ?>
-                <tr>
-                    <td>
-                        <? echo $hotel['name'] ?>
-                    </td>
-                    <td>
-                        <? echo $hotel['description'] ?>
-                    </td>
-                    <td>
-                        <? echo $hotel['parking'] ?>
-                    </td>
-                    <td>
-                        <? echo $hotel['vote'] ?>
-                    </td>
-                    <td>
-                        <? echo $hotel['distance_to_center'] ?>
-                    </td>
-                </tr>
-                <?php }
-                ?>
 
+                <tr>
+                    <?php
+
+                    $park = $hotel['parking'] ? '&#10003;' : '&#10007;';
+
+                    echo "<td>" . $hotel['name'] . "</td>";
+                    echo "<td>" . $hotel['description'] . "</td>";
+                    echo "<td>" . $park . "</td>";
+                    echo "<td>" . $hotel['vote'] . "</td>";
+                    echo "<td>" . $hotel['distance_to_center'] . "</td>";
+
+                    ?>
+                </tr>
+
+                <?php } ?>
 
             </tbody>
         </table>
