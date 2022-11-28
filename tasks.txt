@@ -9,7 +9,7 @@ Partiamo da questo array di hotel. https://www.codepile.net/pile/OEWY7Q1G
 
 BONUS:
 
-[]  Aggiungere un form ad inizio pagina che tramite una richiesta GET permetta di filtrare gli hotel che hanno un parcheggio.
+[x]  Aggiungere un form ad inizio pagina che tramite una richiesta GET permetta di filtrare gli hotel che hanno un parcheggio.
 
 []  Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
     (es. inserisco 3 ed ottengo tutti gli hotel che hanno un voto di tre stelle o superiore)

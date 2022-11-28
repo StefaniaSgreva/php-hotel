@@ -39,6 +39,11 @@ $hotels = [
 
 ];
 
+if (isset($_GET['parking']) && !empty($_GET['parking'])) {
+    $hotels = array_filter($hotels, fn($value) => $value['parking'] == filter_var($_GET['parking'], FILTER_VALIDATE_BOOLEAN));
+    // var_dump($hotels);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -64,9 +69,9 @@ $hotels = [
         <h1 class="text-center my-5">Hotels</h1>
         <form action="index.php" method="_GET" name="formFilter" class="mb-5">
             <select name="parking" id="parking">
-                <option value="">Choose</option>
-                <option value="parking">Car Parking</option>
-                <option value="without_parking">Without Parking</option>
+                <option value="">Car Parking</option>
+                <option value="true">With Parking</option>
+                <option value="false">Without Parking</option>
             </select>
             <button type="submit" class="btn btn-outline-dark ms-2">Filter</button>
         </form>
@@ -95,7 +100,7 @@ $hotels = [
                     echo "<td>" . $hotel['description'] . "</td>";
                     echo "<td>" . $carParking . "</td>";
                     echo "<td>" . $hotel['vote'] . "</td>";
-                    echo "<td>" . $hotel['distance_to_center'] . "</td>";
+                    echo "<td>" . $hotel['distance_to_center'] . ' km' . "</td>";
 
                     ?>
                 </tr>
