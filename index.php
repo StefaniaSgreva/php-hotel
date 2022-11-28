@@ -81,11 +81,11 @@ $hotels = [
                 <tr>
                     <?php
 
-                    $park = $hotel['parking'] ? '&#10003;' : '&#10007;';
+                    $carParking = $hotel['parking'] ? '&#10003;' : '&#10007;';
 
                     echo "<td>" . $hotel['name'] . "</td>";
                     echo "<td>" . $hotel['description'] . "</td>";
-                    echo "<td>" . $park . "</td>";
+                    echo "<td>" . $carParking . "</td>";
                     echo "<td>" . $hotel['vote'] . "</td>";
                     echo "<td>" . $hotel['distance_to_center'] . "</td>";
 
