@@ -73,6 +73,16 @@ if (isset($_GET['parking']) && !empty($_GET['parking'])) {
                 <option value="true">With Parking</option>
                 <option value="false">Without Parking</option>
             </select>
+
+            <select name="vote" id="vote">
+                <option value="">Rating</option>
+                <option value="1">&#11088;</option>
+                <option value="2">&#11088;&#11088;</option>
+                <option value="3">&#11088;&#11088;&#11088;</option>
+                <option value="4">&#11088;&#11088;&#11088;&#11088;</option>
+                <option value="5">&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+            </select>
+
             <button type="submit" class="btn btn-outline-dark ms-2">Filter</button>
         </form>
         <table class="table table-dark table-hover">
